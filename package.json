@@ -1,0 +1,18 @@
+{
+  "name": "all-4-sms",
+  "version": "0.0.1",
+  "description": "Send Sms To Australia",
+  "main": "index.js",
+  "repository": "git@github.com:gamesover/all-4-sms.git",
+  "author": "Ken Ding <ken.ding@mail.com>",
+  "private": true,
+  "scripts": {
+    "build": "cd client && yarn install && yarn build && cd ..",
+    "deploy": "ln -s client/build public",
+    "heroku-postbuild": "yarn build && yarn deploy"
+  },
+  "engines": {
+    "node": "10.16.3",
+    "yarn": "1.19.1"
+  }
+}
